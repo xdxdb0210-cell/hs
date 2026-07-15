@@ -92,20 +92,157 @@
       <section class="resume" id="resume">
         <div class="section-head">
           <p class="eyebrow">RESUME SNAPSHOT</p>
-          <h2>담당자가 먼저 확인해야 할 이력서 요약.</h2>
+          <h2>사원증처럼 빠르게 보고, 상세 이력서는 팝업으로 확인.</h2>
         </div>
 
         <div class="resume-grid">
-          <article class="profile-block">
-            <p class="label">Candidate</p>
-            <h3>지원자 이름</h3>
-            <p class="role">콘텐츠 PD · Creator Business Producer</p>
-            <ul class="contact-list">
-              <li><span>Email</span><strong>yourname@example.com</strong></li>
-              <li><span>Phone</span><strong>010-0000-0000</strong></li>
-              <li><span>Links</span><strong>영상 링크 · 기획서 PDF · 노션 포트폴리오</strong></li>
-            </ul>
-          </article>
+          <div class="resume-access-panel">
+            <article class="profile-block resume-id-card" aria-label="간단 이력서 카드">
+              <div class="id-card-top">
+                <span class="label">Candidate ID</span>
+                <span class="id-status">Resume Ready</span>
+              </div>
+              <span class="profile-photo-frame">
+                <!-- 사진을 넣을 때 이 span을 <img src="assets/profile-photo.jpg" alt="지원자 사진" />로 교체하세요. -->
+                <span class="profile-photo-placeholder">
+                  <span>PHOTO</span>
+                  <small>3x4 Portrait</small>
+                </span>
+              </span>
+              <span class="profile-name-wrap">
+                <span class="candidate-name">지원자 이름</span>
+                <span class="role">콘텐츠 PD · Creator Business Producer</span>
+              </span>
+              <span class="profile-contact-list">
+                <span><small>Email</small><strong>yourname@example.com</strong></span>
+                <span><small>Phone</small><strong>010-0000-0000</strong></span>
+                <span><small>Links</small><strong>영상 링크 · 기획서 PDF · 노션 포트폴리오</strong></span>
+              </span>
+              <span class="id-card-strip">Portfolio HS · Basic Resume</span>
+            </article>
+
+            <article class="resume-open-panel">
+              <p class="label">Basic Resume</p>
+              <h3>세부 이력서는 팝업창에서 더 크게 확인할 수 있습니다.</h3>
+              <p>
+                간단 카드는 신원과 역할만 빠르게 보여주고, 지원 정보부터 프로젝트 증빙까지는
+                별도 팝업에서 제출용 이력서처럼 정리해 확인합니다.
+              </p>
+              <div class="resume-open-tags" aria-label="팝업 이력서 포함 항목">
+                <span>지원 정보</span>
+                <span>경력/경험</span>
+                <span>프로젝트</span>
+                <span>첨부 링크</span>
+              </div>
+              <button class="resume-open-button" type="button" data-open-resume aria-haspopup="dialog" aria-controls="resume-modal">
+                <span>기본 이력서 열기</span>
+                <small>7개 상세 항목 확인</small>
+                <i aria-hidden="true">+</i>
+              </button>
+            </article>
+          </div>
+
+          <dialog class="resume-modal" id="resume-modal" aria-labelledby="resume-modal-title">
+            <div class="resume-modal-shell">
+              <div class="expanded-resume-head">
+                <div>
+                  <p class="eyebrow">BASIC RESUME</p>
+                  <h3 id="resume-modal-title">나의 세부 이력서</h3>
+                </div>
+                <button class="resume-modal-close" type="button" data-close-resume aria-label="이력서 팝업 닫기">닫기</button>
+              </div>
+
+              <div class="expanded-resume-layout">
+                <div class="expanded-resume-sections">
+                  <article class="expanded-resume-section highlight-section">
+                    <span class="resume-section-number">01</span>
+                    <h4>지원 정보</h4>
+                    <dl>
+                      <div><dt>지원 분야</dt><dd>콘텐츠 PD / 크리에이터 비즈니스 PD</dd></div>
+                      <div><dt>희망 역할</dt><dd>포맷 기획, 촬영 운영, 후반 디렉션, 크리에이터 협업</dd></div>
+                      <div><dt>핵심 소개</dt><dd>콘텐츠의 이유, 장면, 결과를 함께 설계하는 제작자</dd></div>
+                    </dl>
+                  </article>
+
+                  <article class="expanded-resume-section">
+                    <span class="resume-section-number">02</span>
+                    <h4>인적 사항</h4>
+                    <dl>
+                      <div><dt>이름</dt><dd>지원자 이름</dd></div>
+                      <div><dt>연락처</dt><dd>010-0000-0000</dd></div>
+                      <div><dt>이메일</dt><dd>yourname@example.com</dd></div>
+                      <div><dt>거주지</dt><dd>서울 / 경기 등 입력</dd></div>
+                    </dl>
+                  </article>
+
+                  <article class="expanded-resume-section">
+                    <span class="resume-section-number">03</span>
+                    <h4>학력 / 교육</h4>
+                    <dl>
+                      <div><dt>학교</dt><dd>학교명 · 전공 · 재학/졸업 상태 입력</dd></div>
+                      <div><dt>교육</dt><dd>콘텐츠 제작, 영상 편집, 마케팅, 크리에이터 교육 과정 입력</dd></div>
+                      <div><dt>수료</dt><dd>수료 기간, 프로젝트 실습, 제출 산출물 입력</dd></div>
+                    </dl>
+                  </article>
+
+                  <article class="expanded-resume-section">
+                    <span class="resume-section-number">04</span>
+                    <h4>경력 / 경험</h4>
+                    <dl>
+                      <div><dt>회사/활동</dt><dd>회사명 또는 활동명 · 기간 · 역할 입력</dd></div>
+                      <div><dt>담당 업무</dt><dd>리서치, 기획안, 섭외, 질문지, 촬영 준비, 편집 방향 등 입력</dd></div>
+                      <div><dt>성과</dt><dd>조회수, 전환, 운영 개선, 협업 결과, 배운 점 등 입력</dd></div>
+                    </dl>
+                  </article>
+
+                  <article class="expanded-resume-section wide-resume-section">
+                    <span class="resume-section-number">05</span>
+                    <h4>프로젝트 / 포트폴리오</h4>
+                    <div class="expanded-project-list">
+                      <div>
+                        <strong>Creator IP Sprint</strong>
+                        <p>채널 댓글과 조회 흐름을 분석해 고정 코너, 오프닝 훅, 질문지를 설계한 프로젝트.</p>
+                      </div>
+                      <div>
+                        <strong>Commerce Short-form</strong>
+                        <p>사용 맥락, 반응 컷, CTA를 나눠 브랜드 콘텐츠를 구매 이유로 연결한 숏폼 기획.</p>
+                      </div>
+                      <div>
+                        <strong>Academy Pilot</strong>
+                        <p>실전 제작 노하우를 챕터, 과제, 예시로 정리한 교육형 콘텐츠 구조.</p>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="expanded-resume-section">
+                    <span class="resume-section-number">06</span>
+                    <h4>역량 / 툴</h4>
+                    <div class="expanded-skill-cloud" aria-label="역량 및 사용 가능 툴">
+                      <span>Premiere Pro</span>
+                      <span>Photoshop</span>
+                      <span>Figma</span>
+                      <span>Blender</span>
+                      <span>콘티</span>
+                      <span>콜시트</span>
+                      <span>브랜드 커뮤니케이션</span>
+                      <span>크리에이터 매니징</span>
+                    </div>
+                  </article>
+
+                  <article class="expanded-resume-section">
+                    <span class="resume-section-number">07</span>
+                    <h4>첨부 / 링크</h4>
+                    <dl>
+                      <div><dt>이력서 PDF</dt><dd>파일명 또는 다운로드 링크 입력</dd></div>
+                      <div><dt>자기소개서</dt><dd>PDF, Notion, Google Docs 등 연결</dd></div>
+                      <div><dt>영상 링크</dt><dd>YouTube, Vimeo, Drive, 포트폴리오 링크 입력</dd></div>
+                      <div><dt>기획서</dt><dd>프로젝트별 PDF, 이미지, 발표 자료 연결</dd></div>
+                    </dl>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </dialog>
 
           <article class="resume-card accent-card">
             <p class="label">Core Pitch</p>
@@ -334,10 +471,51 @@
         { threshold: 0.12 }
       );
 
-      document.querySelectorAll("section, .case-card, .resume-card").forEach((element) => {
+      document.querySelectorAll("section, .case-card, .resume-card, .resume-id-card, .resume-open-panel").forEach((element) => {
         element.classList.add("reveal");
         observer.observe(element);
       });
+
+      const resumeModal = document.getElementById("resume-modal");
+      const openResumeButtons = document.querySelectorAll("[data-open-resume]");
+      const closeResumeButtons = document.querySelectorAll("[data-close-resume]");
+
+      const closeResumeModal = () => {
+        if (!resumeModal) return;
+        if (typeof resumeModal.close === "function" && resumeModal.open) {
+          resumeModal.close();
+        } else {
+          resumeModal.removeAttribute("open");
+          document.body.classList.remove("modal-open");
+        }
+      };
+
+      openResumeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (!resumeModal) return;
+          if (typeof resumeModal.showModal === "function") {
+            resumeModal.showModal();
+          } else {
+            resumeModal.setAttribute("open", "");
+          }
+          resumeModal.querySelector(".resume-modal-shell")?.scrollTo({ top: 0 });
+          document.body.classList.add("modal-open");
+        });
+      });
+
+      closeResumeButtons.forEach((button) => {
+        button.addEventListener("click", closeResumeModal);
+      });
+
+      if (resumeModal) {
+        resumeModal.addEventListener("click", (event) => {
+          if (event.target === resumeModal) closeResumeModal();
+        });
+
+        resumeModal.addEventListener("close", () => {
+          document.body.classList.remove("modal-open");
+        });
+      }
     </script>
   </body>
 </html>
