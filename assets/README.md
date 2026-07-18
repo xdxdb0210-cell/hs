@@ -1,4 +1,4 @@
-﻿# PD Portfolio VS Code Kit
+# PD Portfolio VS Code Kit
 
 이 폴더를 Visual Studio Code로 열면 바로 수정할 수 있는 정적 포트폴리오 웹페이지입니다.
 
